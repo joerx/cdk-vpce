@@ -4,4 +4,8 @@ import * as cdk from '@aws-cdk/core';
 import { CdkVpceStack } from '../lib/cdk-vpce-stack';
 
 const app = new cdk.App();
-new CdkVpceStack(app, 'CdkVpceStack');
+new CdkVpceStack(app, 'CdkVpceStack', {
+    env: {
+        region: 'ap-southeast-1'
+    }
+});
